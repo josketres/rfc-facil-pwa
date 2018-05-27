@@ -1,0 +1,14 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '~@angular/material/theming';
+
+// Define a mixin that accepts a theme and outputs the color styles for the component.
+@mixin natural-person-rfc-theme($theme) {
+
+  // Extract whichever individual palettes you need from the theme.
+  $foreground: map-get($theme, foreground);
+  $foreground-base: map_get($foreground, base);
+
+  .form-hint {
+    color: rgba($foreground-base, 0.5);
+  }
+}
