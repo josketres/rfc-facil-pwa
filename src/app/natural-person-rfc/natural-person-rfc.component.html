@@ -1,6 +1,22 @@
 <div class="container mat-typography">
   <p class="form-hint">Persona física es un individuo con capacidad para contraer obligaciones y ejercer derechos.</p>
+
   <mat-form-field>
-    <input matInput placeholder="Input">
+    <input matInput placeholder="Nombre(s)">
   </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Apellido paterno">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Apellido materno">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Fecha de nacimiento">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
 </div>

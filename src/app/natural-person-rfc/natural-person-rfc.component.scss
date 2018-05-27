@@ -1,5 +1,10 @@
 
-.form-hint {
+.container {
+  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+}
 
-  padding: 8px;
+.form-hint {
+  padding: 16px 0;
 }

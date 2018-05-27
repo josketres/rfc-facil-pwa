@@ -28,6 +28,7 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 @include mat-tabs-theme($app-theme);
 @include mat-form-field-theme($app-theme);
 @include mat-input-theme($app-theme);
+@include mat-datepicker-theme($app-theme);
 //
 // app-specific theme mixins
 @include natural-person-rfc-theme($app-theme);

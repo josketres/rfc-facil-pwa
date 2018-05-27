@@ -6,9 +6,8 @@
 
   // Extract whichever individual palettes you need from the theme.
   $foreground: map-get($theme, foreground);
-  $foreground-base: map_get($foreground, base);
 
   .form-hint {
-    color: rgba($foreground-base, 0.5);
+    color: mat-color($foreground, hint-text);
   }
 }
