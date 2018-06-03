@@ -3,34 +3,31 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {
-  MatButtonModule,
-  MatDatepickerModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatNativeDateModule,
-  MatTabsModule,
-  MatToolbarModule
-} from '@angular/material';
-import {NaturalPersonRfcComponent} from './natural-person-rfc/natural-person-rfc.component';
+import {RouterModule, Routes} from '@angular/router';
+import {HelpModule} from './help/help.module';
+import {CalculateModule} from './calculate/calculate.module';
+import {CoreModule} from './core/core.module';
+import {CalculateComponent} from './calculate/calculate/calculate.component';
+import {HelpComponent} from './help/help/help.component';
+
+const routes: Routes = [
+  {path: 'help', component: HelpComponent},
+  {path: '**', component: CalculateComponent}
+];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NaturalPersonRfcComponent
+    AppComponent
   ],
   imports: [
+    // angular
+    RouterModule.forRoot(routes),
     BrowserModule,
     BrowserAnimationsModule,
-    //
-    // material
-    MatButtonModule,
-    MatToolbarModule,
-    MatTabsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule
+    // app
+    CoreModule,
+    HelpModule,
+    CalculateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

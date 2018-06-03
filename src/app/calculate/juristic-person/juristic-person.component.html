@@ -1,0 +1,14 @@
+<div class="container mat-typography">
+  <p class="form-hint">Persona moral es una agrupación de personas que se unen con un fin determinado, por ejemplo, una sociedad mercantil, una asociación civil.</p>
+
+  <mat-form-field>
+    <input matInput placeholder="Denominación o razón social">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Fecha de constitución">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+</div>

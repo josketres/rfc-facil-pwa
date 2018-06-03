@@ -1,0 +1,15 @@
+// override link styling
+.home {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.help {
+  margin-left: auto;
+}

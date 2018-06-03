@@ -1,5 +1,5 @@
 @import '~@angular/material/theming';
-@import './app/natural-person-rfc/natural-person-rfc-component-theme';
+@import 'app/calculate/natural-person/natural-person-component-theme';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -29,6 +29,7 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 @include mat-form-field-theme($app-theme);
 @include mat-input-theme($app-theme);
 @include mat-datepicker-theme($app-theme);
+@include mat-icon-theme($app-theme);
 //
 // app-specific theme mixins
 @include natural-person-rfc-theme($app-theme);

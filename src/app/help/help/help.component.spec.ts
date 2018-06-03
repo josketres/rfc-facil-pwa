@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NaturalPersonRfcComponent } from './natural-person-rfc.component';
+import { HelpComponent } from './help.component';
 
-describe('NaturalPersonRfcComponent', () => {
-  let component: NaturalPersonRfcComponent;
-  let fixture: ComponentFixture<NaturalPersonRfcComponent>;
+describe('HelpComponent', () => {
+  let component: HelpComponent;
+  let fixture: ComponentFixture<HelpComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NaturalPersonRfcComponent ]
+      declarations: [ HelpComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NaturalPersonRfcComponent);
+    fixture = TestBed.createComponent(HelpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
