@@ -5,7 +5,14 @@ import {CalculateRoutingModule} from './calculate-routing.module';
 import {CalculateComponent} from './calculate/calculate.component';
 import {JuristicPersonComponent} from './juristic-person/juristic-person.component';
 import {NaturalPersonComponent} from './natural-person/natural-person.component';
-import {MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatTabsModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatNativeDateModule,
+  MatTabsModule
+} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -13,6 +20,7 @@ import {MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateMo
     CommonModule,
     // material
     MatTabsModule,
+    MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
@@ -20,7 +28,11 @@ import {MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateMo
     // app
     CalculateRoutingModule
   ],
-  declarations: [CalculateComponent, JuristicPersonComponent, NaturalPersonComponent],
+  declarations: [
+    CalculateComponent,
+    JuristicPersonComponent,
+    NaturalPersonComponent
+  ],
   entryComponents: [CalculateComponent]
 })
 export class CalculateModule {
