@@ -12,7 +12,7 @@ import {HelpComponent} from './help/help/help.component';
 
 const routes: Routes = [
   {path: 'help', component: HelpComponent},
-  {path: '**', component: CalculateComponent}
+  {path: '', component: CalculateComponent}
 ];
 
 @NgModule({

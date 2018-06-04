@@ -1,5 +1,6 @@
 <mat-toolbar color="primary">
   <div class="container">
+    <mat-icon [@backNavigation]="backNavigationState()">arrow_back</mat-icon>
     <a class="home" routerLink="/">¿Cuál es mi RFC?</a>
     <a class="help" mat-icon-button routerLink="/help">
       <mat-icon>help</mat-icon>

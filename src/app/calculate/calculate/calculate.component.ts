@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {StateService} from '../../core/state.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-calculate',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private stateService: StateService, private router: Router) {
+  }
 
   ngOnInit() {
   }
 
+  public showResults(): void {
+    this.router.navigateByUrl('/results');
+    this.stateService.setToolbarBackArrowVisible(true);
+  }
 }

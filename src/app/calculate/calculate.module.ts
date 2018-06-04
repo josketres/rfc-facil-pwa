@@ -13,6 +13,7 @@ import {
   MatNativeDateModule,
   MatTabsModule
 } from '@angular/material';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import {
   declarations: [
     CalculateComponent,
     JuristicPersonComponent,
-    NaturalPersonComponent
+    NaturalPersonComponent,
+    ResultsComponent
   ],
   entryComponents: [CalculateComponent]
 })
