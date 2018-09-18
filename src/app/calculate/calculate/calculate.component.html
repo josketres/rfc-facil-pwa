@@ -1,4 +1,4 @@
-<mat-tab-group>
+<mat-tab-group (selectedTabChange)="changeTab($event)">
   <mat-tab label="Persona física">
     <app-natural-person-rfc></app-natural-person-rfc>
   </mat-tab>
@@ -11,6 +11,6 @@
   class="cta"
   mat-raised-button=""
   color="accent"
-  (click)="showResults()">Consultar RFC
+  (click)="submit()">Consultar RFC
 </button>
 

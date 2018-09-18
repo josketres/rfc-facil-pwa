@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-juristic-person-rfc',
   templateUrl: './juristic-person.component.html',
   styleUrls: ['./juristic-person.component.css']
 })
-export class JuristicPersonComponent implements OnInit {
+export class JuristicPersonComponent {
 
-  constructor() { }
-
-  ngOnInit() {
+  public submit() {
   }
-
 }
