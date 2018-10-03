@@ -1,14 +1,21 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {JuristicPersonIntroComponent} from './juristic-person-intro/juristic-person-intro.component';
-import {JuristicPersonRfcCalculatorComponent} from './juristic-person-rfc-calculator/juristic-person-rfc-calculator.component';
+import {JuristicPersonComponent} from './juristic-person.component';
+import {IntroComponent} from './intro/intro.component';
+import {FormComponent} from './form/form.component';
+import {CoreModule} from '../core/core.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CoreModule,
   ],
-  declarations: [JuristicPersonIntroComponent, JuristicPersonRfcCalculatorComponent],
-  exports: [JuristicPersonIntroComponent, JuristicPersonRfcCalculatorComponent]
+  declarations: [
+    JuristicPersonComponent,
+    IntroComponent,
+    FormComponent
+  ],
+  exports: [
+    JuristicPersonComponent,
+  ]
 })
 export class JuristicPersonModule {
 }

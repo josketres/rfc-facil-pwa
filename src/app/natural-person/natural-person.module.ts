@@ -1,14 +1,21 @@
 import {NgModule} from '@angular/core';
-import {NaturalPersonRfcCalculatorComponent} from './natural-person-rfc-calculator/natural-person-rfc-calculator.component';
 import {CoreModule} from '../core/core.module';
-import {NaturalPersonIntroComponent} from './natural-person-intro/natural-person-intro.component';
+import {NaturalPersonComponent} from './natural-person.component';
+import {IntroComponent} from './intro/intro.component';
+import {FormComponent} from './form/form.component';
 
 @NgModule({
   imports: [
     CoreModule
   ],
-  declarations: [NaturalPersonRfcCalculatorComponent, NaturalPersonIntroComponent],
-  exports: [NaturalPersonRfcCalculatorComponent, NaturalPersonIntroComponent]
+  declarations: [
+    NaturalPersonComponent,
+    IntroComponent,
+    FormComponent
+  ],
+  exports: [
+    NaturalPersonComponent
+  ]
 })
 export class NaturalPersonModule {
 }

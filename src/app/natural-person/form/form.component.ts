@@ -1,31 +1,39 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {Results} from '../../calculate/results/results.component';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {NaturalPerson, RfcService} from '../../calculate/rfc.service';
 import RfcFacil from 'rfc-facil';
 
+export interface NaturalPerson {
+  name: string;
+  firstLastName: string;
+  secondLastName: string;
+  birthDate: Date | string;
+}
+
+export interface Results {
+  name: string;
+  date: string;
+  rfc: string;
+}
+
 @Component({
-  selector: 'app-natural-person-rfc-calculator',
-  templateUrl: './natural-person-rfc-calculator.component.html',
-  styleUrls: ['./natural-person-rfc-calculator.component.css']
+  selector: 'app-form',
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.css']
 })
-export class NaturalPersonRfcCalculatorComponent {
+export class FormComponent {
 
   @Output()
   calculationDone = new EventEmitter<Results>();
 
   public form: FormGroup;
 
-  constructor(fb: FormBuilder, private rfcService: RfcService) {
-    const initialValues = rfcService.state.naturalPerson;
+  constructor(fb: FormBuilder) {
+    const initialValues = {} as any;
     this.form = fb.group({
       name: [initialValues.name, Validators.required],
       firstLastName: [initialValues.firstLastName, Validators.required],
       secondLastName: [initialValues.secondLastName, Validators.required],
       birthDate: [initialValues.birthDate, Validators.required],
-    });
-    this.form.valueChanges.subscribe((naturalPerson: NaturalPerson) => {
-      this.rfcService.update({naturalPerson});
     });
   }
 
@@ -41,7 +49,6 @@ export class NaturalPersonRfcCalculatorComponent {
         year: person.birthDate.getYear()
       });
 
-      this.rfcService.update({rfc});
       this.calculationDone.emit();
     } else {
       Object.values(this.form.controls)
