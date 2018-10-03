@@ -37,6 +37,7 @@ import { ResultsComponent } from './results/results.component';
     NaturalPersonComponent,
     ResultsComponent
   ],
+  exports: [CalculateComponent],
   entryComponents: [CalculateComponent]
 })
 export class CalculateModule {

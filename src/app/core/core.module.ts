@@ -1,21 +1,44 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ToolbarComponent} from './toolbar/toolbar.component';
-import {MatButtonModule, MatIconModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
+  MatNativeDateModule,
+  MatTabsModule,
+  MatToolbarModule
+} from '@angular/material';
 import {RouterModule} from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms';
+
+const material = [
+  MatToolbarModule,
+  MatIconModule,
+  MatTabsModule,
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+];
+
+const angular = [
+  CommonModule,
+  RouterModule,
+  ReactiveFormsModule,
+];
 
 @NgModule({
   imports: [
-    // angular
-    CommonModule,
-    RouterModule,
-    // material
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
+    ...angular,
+    ...material,
   ],
-  declarations: [ToolbarComponent],
-  exports: [ToolbarComponent]
+  exports: [
+    ...angular,
+    ...material,
+  ]
 })
 export class CoreModule {
 }

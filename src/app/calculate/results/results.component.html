@@ -1,3 +1,12 @@
-<p>
-  results works!
-</p>
+<div *ngIf="state$ | async as state">
+
+  <div>{{ state.rfc }}</div>
+
+  <div *ngIf="state.naturalPerson as person">
+    <p>{{ person.name }}</p>
+    <p>{{ person.firstLastName }}</p>
+    <p>{{ person.secondLastName }}</p>
+    <p>{{ person.birthDate }}</p>
+  </div>
+
+</div>

@@ -1,15 +1,15 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {Results} from '../../calculate/results/results.component';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {NaturalPerson, RfcService} from '../../calculate/rfc.service';
 import RfcFacil from 'rfc-facil';
-import {Results} from '../results/results.component';
-import {NaturalPerson, RfcService} from '../rfc.service';
 
 @Component({
-  selector: 'app-natural-person-rfc',
-  templateUrl: './natural-person.component.html',
-  styleUrls: ['./natural-person.component.scss']
+  selector: 'app-natural-person-rfc-calculator',
+  templateUrl: './natural-person-rfc-calculator.component.html',
+  styleUrls: ['./natural-person-rfc-calculator.component.css']
 })
-export class NaturalPersonComponent {
+export class NaturalPersonRfcCalculatorComponent {
 
   @Output()
   calculationDone = new EventEmitter<Results>();
@@ -50,4 +50,3 @@ export class NaturalPersonComponent {
   }
 
 }
-

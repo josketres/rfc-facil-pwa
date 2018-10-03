@@ -7,6 +7,6 @@ import {Component} from '@angular/core';
 })
 export class JuristicPersonComponent {
 
-  public submit() {
+  public calculateRfc() {
   }
 }

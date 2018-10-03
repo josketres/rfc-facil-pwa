@@ -9,6 +9,9 @@ import {CalculateModule} from './calculate/calculate.module';
 import {CoreModule} from './core/core.module';
 import {CalculateComponent} from './calculate/calculate/calculate.component';
 import {HelpComponent} from './help/help/help.component';
+import {NaturalPersonModule} from './natural-person/natural-person.module';
+import {LayoutModule} from './layout/layout.module';
+import {JuristicPersonModule} from './juristic-person/juristic-person.module';
 
 const routes: Routes = [
   {path: 'help', component: HelpComponent},
@@ -27,7 +30,10 @@ const routes: Routes = [
     // app
     CoreModule,
     HelpModule,
-    CalculateModule
+    CalculateModule,
+    NaturalPersonModule,
+    JuristicPersonModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
