@@ -1,15 +1,20 @@
 
-.section-calculator {
+.np-container {
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(8, 1fr);
   grid-gap: 16px;
   height: 400px;
 }
 
-.intro {
+.np-intro {
   grid-area: 2 / 2 / 4 / 4;
 }
 
-.calculator {
+.np-calculator {
   grid-area: 2 / 5 / 5 / 8;
 }
+
+.mat-tab-header {
+  display: none !important;
+}
+

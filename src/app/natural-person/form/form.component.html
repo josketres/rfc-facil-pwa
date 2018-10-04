@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="container mat-typography">
     <mat-form-field>
       <input matInput required formControlName="name" placeholder="Nombre(s)">

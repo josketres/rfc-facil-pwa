@@ -1,9 +1,16 @@
-<section id="personas-fisicas" class="section-calculator">
-  <div class="intro">
+<section class="np-container">
+  <div id="personas-fisicas" class="np-intro">
     <app-intro></app-intro>
   </div>
-  <div class="calculator">
-    <app-form></app-form>
+  <div class="np-calculator">
+    <app-slider>
+      <ng-container class="left">
+        <app-form (calculationDone)="onCalculationDone($event)"></app-form>
+      </ng-container>
+      <ng-container class="right">
+        <app-results [results]="results" (calculateAgain)="onCalculateAgain()"></app-results>
+      </ng-container>
+    </app-slider>
   </div>
 </section>
 
