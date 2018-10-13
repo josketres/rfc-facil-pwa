@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod && npm run build-prerender && npm run prerender",
+    "build-prerender": "ng build --project=prerender --prod --output-hashing=none",
+    "prerender": "ts-node prerender.ts",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -33,10 +35,12 @@
     "@angular/cli": "~7.0.0-rc.3",
     "@angular/compiler-cli": "^7.0.0-rc.1",
     "@angular/language-service": "^7.0.0-rc.1",
+    "@angular/platform-server": "^7.0.0-rc.1",
     "@types/jasmine": "~2.8.9",
     "@types/jasminewd2": "~2.0.5",
     "@types/node": "~10.11.7",
     "codelyzer": "~4.5.0",
+    "html-minifier": "^3.5.20",
     "jasmine-core": "~3.2.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.0.0",
@@ -45,7 +49,7 @@
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^1.3.1",
     "protractor": "~5.4.1",
-    "ts-node": "~7.0.1",
+    "ts-node": "^7.0.1",
     "tslint": "~5.9.1",
     "typescript": "~3.1.1"
   }

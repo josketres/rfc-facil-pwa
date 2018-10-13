@@ -10,7 +10,6 @@ import {
   MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
-import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
 import {SentryErrorHandler} from './sentry-error-handler';
 
@@ -27,7 +26,6 @@ const material = [
 
 const angular = [
   CommonModule,
-  RouterModule,
   ReactiveFormsModule,
 ];
 
