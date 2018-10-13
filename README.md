@@ -1,5 +1,7 @@
 # RfcFacilPwa
 
+[![Build Status](https://travis-ci.org/josketres/rfc-facil-pwa.svg?branch=master)](https://travis-ci.org/josketres/rfc-facil-pwa)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
 ## Development server
