@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {ErrorHandler, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
   MatButtonModule,
@@ -12,6 +12,7 @@ import {
 } from '@angular/material';
 import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
+import {SentryErrorHandler} from './sentry-error-handler';
 
 const material = [
   MatToolbarModule,
@@ -35,6 +36,7 @@ const angular = [
     ...angular,
     ...material,
   ],
+  providers: [{provide: ErrorHandler, useClass: SentryErrorHandler}],
   exports: [
     ...angular,
     ...material,
