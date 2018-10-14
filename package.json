@@ -7,7 +7,7 @@
     "build": "ng build --prod && npm run build-prerender && npm run prerender",
     "build-prerender": "ng build --project=prerender --prod --output-hashing=none",
     "prerender": "ts-node prerender.ts",
-    "test": "ng test",
+    "test": "echo no unit-tests for now",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
