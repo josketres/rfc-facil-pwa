@@ -1,7 +1,7 @@
 import {ErrorHandler, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
-  MatButtonModule,
+  MatButtonModule, MatCardModule,
   MatDatepickerModule,
   MatFormFieldModule,
   MatIconModule,
@@ -22,6 +22,7 @@ const material = [
   MatInputModule,
   MatDatepickerModule,
   MatNativeDateModule,
+  MatCardModule,
 ];
 
 const angular = [

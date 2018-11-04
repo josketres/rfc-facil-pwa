@@ -16,7 +16,12 @@ export class FormComponent {
   form: FormGroup;
 
   constructor(fb: FormBuilder) {
-    const initialValues = {} as any;
+    const initialValues = {
+      name: 'Josue',
+      firstLastName: 'zarzosa',
+      secondLastName: 'de la torre',
+      birthDate: new Date()
+    } as any;
     this.form = fb.group({
       name: [initialValues.name, Validators.required],
       firstLastName: [initialValues.firstLastName, Validators.required],

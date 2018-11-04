@@ -1,20 +1,29 @@
 
 .np-container {
-  display: grid;
-  grid-template: repeat(4, 1fr) / repeat(8, 1fr);
-  grid-gap: 16px;
-  height: 400px;
-}
-
-.np-intro {
-  grid-area: 2 / 2 / 4 / 4;
+  margin-top: 32px;
 }
 
 .np-calculator {
-  grid-area: 2 / 5 / 5 / 8;
+  margin-top: 32px;
 }
 
 .mat-tab-header {
   display: none !important;
 }
 
+@media (min-width: 600px) {
+  .np-container {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(8, 1fr);
+    grid-gap: 16px;
+    height: 400px;
+  }
+
+  .np-intro {
+    grid-area: 2 / 2 / 4 / 4;
+  }
+
+  .np-calculator {
+    grid-area: 2 / 5 / 5 / 8;
+  }
+}

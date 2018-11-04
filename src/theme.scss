@@ -29,5 +29,6 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 @include mat-input-theme($app-theme);
 @include mat-datepicker-theme($app-theme);
 @include mat-icon-theme($app-theme);
+@include mat-card-theme($app-theme);
 //
 // app-specific theme mixins
