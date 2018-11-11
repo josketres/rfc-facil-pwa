@@ -1,6 +1,5 @@
-<div *ngIf="results">
-  <p>{{ results.name }}</p>
-  <p>{{ results.date }}</p>
-  <p>{{ results.rfc }}</p>
+<div class="mat-typography results-container">
+  <p class="title mat-body-2">Rfc con homoclave</p>
+  <p class="rfc">{{ results.rfc }}</p>
+  <button mat-flat-button="" color="primary" (click)="onBackClick()">Regresar al formulario</button>
 </div>
-<button mat-button="" color="primary" (click)="onBackClick()">back</button>

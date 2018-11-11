@@ -3,14 +3,8 @@
     <app-intro></app-intro>
   </div>
   <div class="np-calculator">
-    <app-slider>
-      <ng-container class="left">
-        <app-form (calculationDone)="onCalculationDone($event)"></app-form>
-      </ng-container>
-      <ng-container class="right">
-        <app-results [results]="results" (calculateAgain)="onCalculateAgain()"></app-results>
-      </ng-container>
-    </app-slider>
+    <app-form *ngIf="!results" (calculationDone)="onCalculationDone($event)"></app-form>
+    <app-results *ngIf="results" [results]="results" (calculateAgain)="onCalculateAgain()"></app-results>
   </div>
 </section>
 
